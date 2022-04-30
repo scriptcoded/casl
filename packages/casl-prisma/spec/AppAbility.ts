@@ -1,8 +1,8 @@
 import { AbilityClass } from '@casl/ability'
-import { User, Post } from '@prisma/client'
+import { User, Post } from '../node_modules/.prisma/client'
 import { PrismaAbility, Subjects } from '../src'
 
-export type AppAbility = PrismaAbility<[string, Subjects<{
+export type AppAbility = PrismaAbility<[string, 'all' | Subjects<{
   User: User,
   Post: Post
 }>]>
